@@ -4,8 +4,13 @@ import java.util.List;
 
 public abstract class DataReader
 {
-	private String searchCriteria;
-	private SearchType searchType;
+
+	////////////////////////////////////////////////////////////////////////
+
+	protected String searchCriteria;
+	protected SearchType searchType;
+
+	////////////////////////////////////////////////////////////////////////
 
 	public void setSearchCriteria(String searchCriteria)
 	{
@@ -17,6 +22,10 @@ public abstract class DataReader
 		this.searchType = searchType;
 	}
 
+	////////////////////////////////////////////////////////////////////////
+
 	public abstract List<Person> getPerson(String searchCriteria, SearchType SearchType);
+
+	////////////////////////////////////////////////////////////////////////
 
 }
